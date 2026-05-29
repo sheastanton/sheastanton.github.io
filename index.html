@@ -1,15 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <title>Shea Stanton | Personal Website</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f2efe9;
+      color: #1f2d2b;
+      font-family: Georgia, serif;
+    }
+
+    header {
+      background-color: #74c4be;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 12px;
+      color: #d6c9a8;
+    }
+
+    .nav-bar {
+      background-color: #d6c9a8;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-bar a {
+      color: #74c4be;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .nav-bar a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      width: 85%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .intro-box {
+      background-color: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro-box h2 {
+      color: #74c4be;
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .intro-box p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-top: 8px solid #d6c9a8;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-card h2 {
+      color: #74c4be;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    .course-card {
+      grid-column: span 2;
+      background-color: #74c4be;
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .course-card h2 {
+      color: #d6c9a8;
+      font-size: 28px;
+    }
+
+    .course-card p {
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .course-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #d6c9a8;
+      color: #74c4be;
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .course-button:hover {
+      background-color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #74c4be;
+      font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-card {
+        grid-column: span 1;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Shea Stanton</h1>
+    <p>Cybersecurity & AI Student | Web Development Learner</p>
+  </header>
 
-    <h1>Yo it's Shea, and this is the root of my website!</h1>
+  <nav class="nav-bar">
+    <a href="itis3135/index.html">ITIS3135 Site</a>
+    <a href="itis3135/introduction.html">Introduction</a>
+    <a href="itis3135/contract.html">Contract</a>
+  </nav>
 
-    <p>
-        <a href="itis3135/">Click to go to my ITIS3135 Site</a>
-    </p>
+  <main>
+    <section class="intro-box">
+      <h2>Welcome to My Website</h2>
+      <p>
+        Yo, it's Shea, and this is the root of my website. This page connects to my ITIS3135 coursework
+        and gives a quick look at my interests, goals, and current work.
+      </p>
+    </section>
 
+    <div class="content-grid">
+      <section class="info-card">
+        <h2>About Me</h2>
+        <p>
+          I am a student at UNC Charlotte studying Cybersecurity and Artificial Intelligence.
+          I am interested in learning how technology works and how to build useful digital projects.
+        </p>
+      </section>
+
+      <section class="info-card">
+        <h2>Interests</h2>
+        <ul>
+          <li>Cybersecurity</li>
+          <li>Artificial Intelligence</li>
+          <li>Gym</li>
+          <li>Hanging out with friends and family</li>
+          <li>Making money</li>
+        </ul>
+      </section>
+
+      <section class="course-card">
+        <h2>Course Work</h2>
+        <p>
+          I am currently working on ITIS3135: Front-End Web Application Development.
+          Click below to visit my course page.
+        </p>
+
+        <a class="course-button" href="itis3135/index.html">Go to My ITIS3135 Site →</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Designed by Shea Stanton © 2026</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,65 @@
+body {
+  background-color: #74c4be;
+  color: black;
+  font-family: Georgia, serif;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 42px;
+  margin: 0;
+  padding: 20px;
+}
+
+nav {
+  font-size: 22px;
+  margin: 20px 0;
+  padding-left: 5px;
+}
+
+a {
+  color: #3b0080;
+}
+
+main {
+  padding: 10px;
+}
+
+h2 {
+  color: purple;
+  text-align: center;
+  font-size: 32px;
+}
+
+main p {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+ul {
+  font-size: 24px;
+}
+
+figure {
+  text-align: center;
+}
+
+figure img {
+  width: 400px;
+  max-width: 90%;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+footer p {
+  font-size: 26px;
+}
