@@ -41,6 +41,7 @@ nav a {
 nav a:hover {
   background-color: #74c4be;
   color: white;
+  text-decoration: underline;
 }
 
 .secondary-nav {
