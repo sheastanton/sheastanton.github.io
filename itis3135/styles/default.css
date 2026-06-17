@@ -18,25 +18,35 @@ h1 {
 
 nav {
   background-color: #d6c9a8;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  padding: 15px;
+  padding: 12px;
   margin: 0;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 nav a {
   color: #1f2d2b;
   text-decoration: none;
-  margin: 0 12px;
-  padding: 8px 12px;
-  border-radius: 20px;
+  padding: 5px 8px;
+  border-radius: 16px;
   transition: 0.3s ease;
 }
 
 nav a:hover {
   background-color: #74c4be;
   color: white;
+}
+
+.secondary-nav {
+  padding-top: 6px;
+  padding-bottom: 12px;
+  font-size: 18px;
 }
 
 main {
