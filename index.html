@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shea Stanton | Personal Website</title>
+  <title>Shea Stanton | Personal Website | Home</title>
+  <link rel="icon" type="image/x-icon" href="itis3135/images/favicon.ico">
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
   <style>
@@ -10,72 +11,55 @@
       margin: 0;
       background-color: #f2efe9;
       color: #1f2d2b;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
     }
 
     header {
       background-color: #74c4be;
       color: #ffffff;
-      padding: 35px 20px;
+      padding: 28px 20px;
       text-align: center;
     }
 
     h1 {
       margin: 0;
-      font-size: 44px;
+      font-size: 42px;
       letter-spacing: 1px;
     }
 
     header p {
       font-size: 20px;
-      margin: 8px 0 0;
+      margin: 6px 0 0;
       color: #ffffff;
-    }
-
-    nav {
-      background-color: #d6c9a8;
-      text-align: center;
-      padding: 14px;
-      font-size: 17px;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #1f2d2b;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-      color: #000000;
     }
 
     main {
       width: 85%;
-      max-width: 1000px;
-      margin: 30px auto;
+      max-width: 950px;
+      margin: 24px auto;
     }
 
     section {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 20px 24px;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 24px;
-      border-top: 8px solid #d6c9a8;
+      box-shadow: 0 3px 10px rgba(31, 45, 43, 0.12);
+      margin-bottom: 18px;
+      border-top: 6px solid #d6c9a8;
     }
 
     h2 {
       color: #74c4be;
-      font-size: 28px;
-      margin: 0 0 10px;
+      font-size: 30px;
+      margin: 0 0 14px;
+      text-align: center;
     }
 
     h3 {
       color: #74c4be;
-      font-size: 24px;
-      margin: 0 0 10px;
+      font-size: 23px;
+      margin: 0 0 8px;
     }
 
     p,
@@ -86,28 +70,34 @@
 
     p {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     ul {
+      columns: 2;
+      column-gap: 40px;
       padding-left: 25px;
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    .course-link {
-      font-weight: bold;
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
       color: #1f2d2b;
+      font-weight: bold;
       text-decoration: underline;
     }
 
-    .course-link:hover {
+    a:hover {
       color: #74c4be;
     }
 
     footer {
       text-align: center;
-      padding: 18px;
+      padding: 14px 18px;
       color: #1f2d2b;
       font-size: 16px;
     }
@@ -127,13 +117,25 @@
     }
 
     @media (max-width: 700px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
+      h1 {
+        font-size: 34px;
+      }
+
+      header p {
+        font-size: 18px;
       }
 
       main {
         width: 90%;
+        margin: 20px auto;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      ul {
+        columns: 1;
       }
     }
   </style>
@@ -141,25 +143,28 @@
 
 <body>
   <header>
-    <h1>Shea Stanton</h1>
-    <p>Cybersecurity & AI Student | Web Development Learner</p>
+    <h1>Shea Stanton | Personal Website</h1>
+    <p>Cybersecurity &amp; AI Student | Web Development Learner</p>
   </header>
 
-  <nav>
-    <a class="course-link" href="itis3135/index.html">ITIS3135 Course Site</a>
-  </nav>
-
   <main>
+    <h2>Home</h2>
+
     <section>
-      <h2>Welcome to My Website</h2>
+      <h3>Welcome to My Website</h3>
       <p>
         Hi, I'm Shea, and this is the root of my personal website. This page gives a quick look at
         my interests, goals, and current work.
       </p>
+      <p>
+        This website also connects to my
+        <a href="itis3135/index.html">ITIS3135 Course Site</a>, where I am building projects for
+        Front-End Web Application Development.
+      </p>
     </section>
 
     <section>
-      <h2>About Me</h2>
+      <h3>About Me</h3>
       <p>
         I am a student at UNC Charlotte studying Cybersecurity and Artificial Intelligence.
         I am interested in learning how technology works and how to build useful digital projects.
@@ -167,27 +172,23 @@
     </section>
 
     <section>
-      <h2>Interests</h2>
+      <h3>Interests</h3>
       <ul>
         <li>Cybersecurity</li>
         <li>Artificial Intelligence</li>
+        <li>Entrepreneurship</li>
+        <li>Web development</li>
         <li>Gym</li>
         <li>Hanging out with friends and family</li>
-        <li>Entrepreneurship</li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Course Work</h2>
-      <p>
-        I am currently working on ITIS3135: Front-End Web Application Development.
-        Visit my <a class="course-link" href="itis3135/index.html">ITIS3135 Course Site</a>.
-      </p>
     </section>
   </main>
 
   <footer>
-    <p>Page created by <a href="itis3135/stantonfranchise.co/index.html">Stanton Franchise</a></p>
+    <p>
+      Page created by
+      <a href="itis3135/stantonfranchise.co/index.html">Stanton Franchise</a>
+    </p>
   </footer>
 </body>
 </html>
