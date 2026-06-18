@@ -134,11 +134,17 @@ footer a:hover {
   margin-top: 25px;
 }
 
+#playing-cards h3 {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
-  flex: 0 1 180px;
-  min-height: 240px;
+  flex: 0 0 280px;
+  min-height: 330px;
   padding: 15px;
   border: 2px solid #1f2d2b;
   border-radius: 12px;
