@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streetwear Design & Custom Apparel | Shea Stanton | ITIS3135</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    :root {
+      --background: #101010;
+      --surface: #181818;
+      --surface-light: #242424;
+      --concrete: #d8d2c6;
+      --muted: #aaa49a;
+      --line: #3a3a3a;
+      --accent: #b65f2a;
+      --accent-soft: #d6a05d;
+      --olive: #5f6f52;
+      --text: #f2eee7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(16, 16, 16, 0.96), rgba(16, 16, 16, 0.96)),
+        repeating-linear-gradient(
+          45deg,
+          #111111 0,
+          #111111 12px,
+          #1a1a1a 12px,
+          #1a1a1a 24px
+        );
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 24px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--muted);
+      background-color: transparent;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--background);
+      background-color: var(--accent-soft);
+      border-color: var(--accent-soft);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 34px auto;
+      padding: 0 24px;
+    }
+
+    section {
+      display: none;
+      background-color: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 48px 56px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    section.active-section {
+      display: block;
+    }
+
+    h2 {
+      margin: 0 auto 24px;
+      max-width: 900px;
+      font-size: 2.65rem;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 16px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--concrete);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 0 auto 18px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .divider {
+      max-width: 900px;
+      margin: 34px auto;
+      color: var(--accent-soft);
+      font-size: 1.1rem;
+      letter-spacing: 14px;
+      text-align: center;
+    }
+
+    figure {
+      max-width: 980px;
+      margin: 36px auto 0;
+      background-color: var(--surface-light);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 14px;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 16px;
+      filter: contrast(1.05) saturate(0.9);
+    }
+
+    figcaption {
+      margin: 18px auto 4px;
+      max-width: 900px;
+      color: var(--text);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    figure p {
+      margin: 8px auto 8px;
+      max-width: 850px;
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    section > p {
+      text-align: left;
+    }
+
+    section > p:first-of-type {
+      margin-top: 8px;
+    }
+
+    ul,
+    ol {
+      margin: 24px 0 0;
+      padding: 22px 26px 22px 44px;
+      background-color: var(--surface-light);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 28px;
+      overflow: hidden;
+      border-radius: 18px;
+      background-color: var(--surface-light);
+      border: 1px solid var(--line);
+    }
+
+    th,
+    td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      color: var(--background);
+      background-color: var(--accent-soft);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .info-card {
+      background-color: var(--surface-light);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--olive);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      max-width: 1180px;
+      margin: 34px auto 0;
+      padding: 24px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    footer p {
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--accent-soft);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    footer a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    .validation-links {
+      margin-top: 14px;
+    }
+
+    .validation-links a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: var(--surface-light);
+      border: 1px solid var(--line);
+      color: var(--accent-soft);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .validation-links a:hover {
+      background-color: var(--accent-soft);
+      color: var(--background);
+    }
+
+    @media screen and (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      section {
+        padding: 28px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Streetwear Design & Custom Apparel</h1>
+
+    <nav>
+      <a href="#what" class="nav-link active">What</a>
+      <a href="#who" class="nav-link">Who</a>
+      <a href="#when" class="nav-link">When</a>
+      <a href="#where" class="nav-link">Where</a>
+      <a href="#how" class="nav-link">How</a>
+      <a href="#why" class="nav-link">Why</a>
+      <a href="#ai-prompts" class="nav-link">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="what" class="active-section">
+      <h2>What: The Hobby</h2>
+
+      <p>
+        Streetwear design is the process of creating clothing that feels wearable, bold,
+        and connected to culture. It combines fashion, branding, graphics, fabric, fit,
+        and attitude into pieces people can actually wear every day.
+      </p>
+
+      <p>
+        I like streetwear because it is creative but still practical. A hoodie, jacket,
+        shirt, or pair of pants can look simple at first, but the fit, material, logo
+        placement, stitching, and color choices can make the piece feel completely different.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-home3135.png" alt="A modern streetwear design studio with sketches, fabric, and garments">
+        <figcaption>Streetwear starts with identity, materials, and strong visual direction.</figcaption>
+      </figure>
+
+      <div class="cards">
+        <article class="info-card">
+          <h3>Fit</h3>
+          <p>Streetwear depends on silhouette, proportion, oversized shapes, and clean layering.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Graphics</h3>
+          <p>Logos, prints, embroidery, and placement choices give each piece its identity.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Materials</h3>
+          <p>Heavy cotton, denim, canvas, fleece, nylon, and washed fabrics create the final feel.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="who">
+      <h2>Who: About Me</h2>
+
+      <p>
+        I am interested in creating streetwear because clothing is one of the clearest ways
+        to show personality, confidence, and taste without saying anything.
+      </p>
+
+      <p>
+        Streetwear design requires creativity, but it also requires control. The piece has to
+        look good, fit correctly, and feel natural when someone wears it in real life.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-about3135.png" alt="A designer sketching streetwear concepts at a clean desk">
+        <figcaption>Streetwear design begins with sketches, references, and a clear mood.</figcaption>
+      </figure>
+
+      <ul>
+        <li>I like clothing that feels clean, bold, and wearable.</li>
+        <li>I enjoy combining simple shapes with strong design details.</li>
+        <li>I am interested in creating pieces that feel original instead of mass-produced.</li>
+      </ul>
+    </section>
+
+    <section id="when">
+      <h2>When: Best Times to Design</h2>
+
+      <p>
+        Streetwear design can happen whenever inspiration hits, but the best pieces usually
+        come from organized planning and repeated revision.
+      </p>
+
+      <p>
+        Sketching works best when ideas are fresh. Pattern planning, fabric selection, and
+        construction need more focused time because small mistakes can change the entire fit.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-schedule3135.png" alt="A streetwear project planning desk with sketches and fabric samples">
+        <figcaption>Planning keeps a streetwear collection consistent and wearable.</figcaption>
+      </figure>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Best Time</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Concept</td>
+            <td>When inspiration is fresh</td>
+            <td>Strong ideas are easier to capture quickly.</td>
+          </tr>
+
+          <tr>
+            <td>Material Choice</td>
+            <td>Before construction</td>
+            <td>Fabric weight changes the fit, structure, and feel.</td>
+          </tr>
+
+          <tr>
+            <td>Build</td>
+            <td>Focused work sessions</td>
+            <td>Cutting, sewing, and finishing need patience and accuracy.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="where">
+      <h2>Where: Best Places to Create</h2>
+
+      <p>
+        Streetwear can be designed anywhere, but the best workspace has room for sketching,
+        cutting fabric, testing outfits, and organizing materials.
+      </p>
+
+      <p>
+        A strong design space should feel clean but not empty. It should have references,
+        fabric, tools, and finished pieces visible enough to keep the designer inspired.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-location3135.png" alt="A masculine streetwear studio with garments, fabric, and design tools">
+        <figcaption>A good studio helps connect ideas, materials, and finished garments.</figcaption>
+      </figure>
+
+      <ol>
+        <li>A sketching area helps develop silhouettes and graphics.</li>
+        <li>A cutting table gives space for fabric, patterns, and measurements.</li>
+        <li>A clothing rack helps organize samples and finished pieces.</li>
+      </ol>
+    </section>
+
+    <section id="how">
+      <h2>How: The Design Process</h2>
+
+      <p>
+        The streetwear design process starts with a concept. After that, the designer chooses
+        the garment type, builds the silhouette, picks fabric, and adds details like graphics,
+        stitching, tags, or hardware.
+      </p>
+
+      <p>
+        A strong streetwear piece should look good from far away but also have details that
+        make it feel intentional up close.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-process3135.png" alt="Streetwear sketches, fabric swatches, scissors, and sewing tools">
+        <figcaption>The process moves from rough concept to wearable final piece.</figcaption>
+      </figure>
+
+      <ol>
+        <li>Choose the concept or mood for the piece.</li>
+        <li>Sketch the silhouette and main design details.</li>
+        <li>Select fabric, color, trims, graphics, and hardware.</li>
+        <li>Cut, sew, test the fit, and adjust the construction.</li>
+        <li>Style the final piece with other garments to complete the look.</li>
+      </ol>
+    </section>
+
+    <section id="why">
+      <h2>Why: Why I Enjoy It</h2>
+
+      <p>
+        I enjoy streetwear design because it turns personal taste into something physical.
+        A good piece can feel simple, but still carry confidence, identity, and originality.
+      </p>
+
+      <p>
+        Streetwear also connects fashion with business, culture, and branding. It is not just
+        about making clothes; it is about creating a visual identity people want to wear.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-why3135.png" alt="A finished custom streetwear outfit on a mannequin">
+        <figcaption>A finished streetwear piece should feel original, wearable, and confident.</figcaption>
+      </figure>
+
+      <ul>
+        <li>It combines creativity, clothing, branding, and culture.</li>
+        <li>It makes everyday clothing feel personal and intentional.</li>
+        <li>It allows simple pieces to become recognizable through detail and fit.</li>
+      </ul>
+    </section>
+
+    <section id="ai-prompts">
+      <h2>AI Prompts</h2>
+
+      <p>
+        I only used AI to create images. Each image below was generated with a prompt to match the streetwear design theme of the site.
+      </p>
+
+      <div class="divider">◆ ◆ ◆</div>
+
+      <figure>
+        <img src="images/fashion-home3135.png" alt="A modern streetwear design studio with hoodies, sketches, fabric, and sewing tools">
+        <figcaption>Streetwear Design Studio</figcaption>
+        <p>
+          AI prompt used: Create a realistic modern streetwear design studio. Show oversized hoodies,
+          cargo pants, heavyweight cotton fabric swatches, denim samples, a sewing machine, measuring tape,
+          sketches, and a clothing rack. Use a dark masculine minimalist aesthetic with charcoal,
+          concrete gray, muted olive, rust, and off-white tones. Editorial photography style,
+          high-end streetwear brand atmosphere, clean composition, no text.
+        </p>
+      </figure>
+
+      <figure>
+        <img src="images/fashion-about3135.png" alt="A streetwear designer sketching hoodie and jacket concepts at a desk">
+        <figcaption>Designer Sketching Concepts</figcaption>
+          <p>
+            AI prompt used: Create a realistic image of a streetwear designer sketching hoodie and jacket
+            concepts at a clean desk. Include pencils, heavyweight fabric samples, measuring tape, a dark mood board,
+            streetwear silhouettes, cargo pants sketches, and neutral design references. Use soft natural light,
+            masculine minimalist studio style, charcoal and concrete tones, high-end streetwear editorial photography,
+            no text.
+          </p>
+      </figure>
+
+      <figure>
+        <img src="images/fashion-schedule3135.png" alt="A streetwear project planning desk with sketches, calendar, swatches, and sewing tools">
+        <figcaption>Project Planning Layout</figcaption>
+          <p>
+            AI prompt used: Create a realistic streetwear project planning scene. Show a minimalist dark desk
+            with a blank calendar, hoodie sketches, cargo pants designs, heavyweight fabric swatches,
+            color palette cards, thread spools, scissors, and sewing tools arranged neatly. Use charcoal,
+            concrete gray, off-white, muted olive, rust, and tan tones. Modern masculine editorial photography style,
+            clean and organized, no text.
+          </p>
+      </figure>
+
+      <figure>
+        <img src="images/fashion-location3135.png" alt="A masculine streetwear workspace with mannequin, fabric, sewing machine, and clothing rack">
+        <figcaption>Streetwear Workspace</figcaption>
+          <p>
+            AI prompt used: Create a realistic masculine streetwear workspace. Show a mannequin wearing an unfinished
+            oversized streetwear jacket, fabric rolls, a sewing machine, hoodie sketches pinned on the wall,
+            a clothing rack with neutral streetwear pieces, measuring tape, and organized design supplies.
+            Use a minimalist concrete-style interior, soft moody lighting, charcoal and neutral color palette,
+            high-end streetwear studio aesthetic, no text.
+          </p>
+      </figure>
+
+      <figure>
+        <img src="images/fashion-process3135.png" alt="A flat lay of streetwear sketches, fabric swatches, scissors, hardware, and sewing tools">
+        <figcaption>Streetwear Design Process</figcaption>
+          <p>
+            AI prompt used: Create a realistic close-up flat lay of the streetwear design process.
+            Include hoodie sketches, cargo pants sketches, heavyweight cotton swatches, denim, canvas,
+            scissors, measuring tape, thread, pins, buttons, metal hardware, clothing tags, and a pencil
+            arranged neatly on a concrete-gray table. Use soft shadows, warm low natural lighting,
+            masculine minimalist editorial style, no text.
+          </p>
+      </figure>
+
+      <figure>
+        <img src="images/fashion-why3135.png" alt="A finished custom masculine streetwear outfit displayed on a mannequin">
+        <figcaption>Finished Custom Streetwear Outfit</figcaption>
+          <p>
+            AI prompt used: Create a realistic image of a finished custom masculine streetwear outfit displayed
+            on a mannequin in a modern studio. The outfit should include an oversized structured jacket,
+            relaxed cargo pants, and visible fabric texture. Use neutral colors, clean tailoring details,
+            subtle hardware, and a confident luxury streetwear look. Soft warm lighting, charcoal concrete background,
+            high-end streetwear editorial photography style, no text.
+          </p>
+      </figure>
+
+      <figure> 
+        <img src="images/favicon.ico" alt="A minimalist hoodie favicon with a needle and thread detail"> 
+        <figcaption>Streetwear Favicon</figcaption> 
+          <p>
+            AI prompt used: Create a simple minimalist favicon icon for a streetwear design website. Show a clean line-art 
+            oversized hoodie with a small needle and thread detail. Use a dark charcoal background with muted rust or off-white 
+            linework. Simple, modern, masculine, recognizable at small size, no text. 
+          </p> 
+      </figure>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Designed by <a href="../stantonfranchise.co/index.html">Stanton Franchise</a> &#9670;
+      Streetwear Design & Custom Apparel Hobby Site
+    </p>
+
+    <div class="validation-links">
+      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
+      <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/bstanto1/itis3135/hobby/">Accessibility Validation</a>
+    </div>
+  </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("main section");
+
+    function showSection(sectionId) {
+      sections.forEach((section) => {
+        section.classList.remove("active-section");
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      const selectedSection = document.querySelector(sectionId);
+      const selectedLink = document.querySelector(`a[href="${sectionId}"]`);
+
+      if (selectedSection) {
+        selectedSection.classList.add("active-section");
+      }
+
+      if (selectedLink) {
+        selectedLink.classList.add("active");
+      }
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        showSection(this.getAttribute("href"));
+      });
+    });
+  </script>
+</body>
+</html>
