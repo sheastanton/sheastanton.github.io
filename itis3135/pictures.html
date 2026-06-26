@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shea Stanton's Swift Shark | ITIS3135 | Pictures</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+<main>
+  <h2>Everything Images</h2>
+
+  <p>
+    This page demonstrates how images work in web design, including file formats,
+    image size, storage size, proper resizing, and what happens when images are
+    stretched or compressed incorrectly. The goal is to compare original images,
+    edited versions, properly resized images, and distorted examples.
+  </p>
+
+  <section>
+    <h3>Demonstrating Image Manipulation with a Pexels Photo</h3>
+
+    <p>
+      I chose this image from Pexels because it has strong color, detail, and a large
+      original size, which makes it useful for testing different image formats and
+      resizing methods. The photo was taken by [Photographer Name]. The original image
+      is a JPG file with dimensions of [width] × [height] pixels and a file size of
+      about [size] MB.
+    </p>
+
+    <article>
+      <h4>Original Image</h4>
+      <p>
+        Click to open the image in its original JPG format:
+        <a href="images/pexels-ana-kenk-2159501753-36468248.jpg" target="_blank" rel="noopener noreferrer">
+          Original JPG
+        </a>
+      </p>
+
+      <p class="image-links">
+        <a href="images/pexels-ana-kenk-2159501753-36468248.jpg" target="_blank" rel="noopener noreferrer">Original JPG</a>
+        <a href="images/pexels-ana-kenk-2159501753-36468248.gif" target="_blank" rel="noopener noreferrer">Original as GIF</a>
+        <a href="images/pexels-ana-kenk-2159501753-36468248-greyscale.jpg" target="_blank" rel="noopener noreferrer">Greyscale</a>
+        <a href="images/pexels-ana-kenk-2159501753-36468248-blackwhite.jpg" target="_blank" rel="noopener noreferrer">Black and White</a>
+      </p>
+    </article>
+
+    <article>
+      <h4>Downsizing Images with CSS</h4>
+
+      <figure>
+        <img src="images/pexels-ana-kenk-2159501753-36468248.jpg" alt="Large Pexels photo resized smaller with CSS" style="width: 20%; height: auto;">
+        <figcaption>
+          This is the original image displayed much smaller using CSS while keeping the correct proportions.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <h4>Proper Reduction of Image with Editor</h4>
+
+      <figure>
+        <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Properly reduced Pexels photo" width="600" height="400">
+        <figcaption>
+          This version was resized in an image editor to a better web size while keeping its original proportions.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <h4>Improper Image Proportions with CSS</h4>
+
+      <div class="image-grid">
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Pexels image with height reduced" style="width: 300px; height: 200px;">
+          <figcaption>Correct proportion example.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Pexels image squished vertically" style="width: 300px; height: 134px;">
+          <figcaption>The height is reduced, making the image look squished.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Pexels image squished more vertically" style="width: 300px; height: 90px;">
+          <figcaption>The height is reduced even more, making the distortion worse.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Pexels image squeezed horizontally" style="width: 201px; height: 200px;">
+          <figcaption>The width is reduced, making the image look squeezed.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Pexels image squeezed more horizontally" style="width: 135px; height: 200px;">
+          <figcaption>The width is reduced even more, making the image look badly distorted.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article>
+      <h4>Improper Enlarging with CSS</h4>
+
+      <div class="image-grid">
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-600x400.jpg" alt="Properly sized Pexels image" style="width: 300px; height: auto;">
+          <figcaption>This image started large enough, so it still looks clear at this display size.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pexels-ana-kenk-2159501753-36468248-150x100.jpg" alt="Small Pexels image enlarged with CSS" style="width: 300px; height: auto;">
+          <figcaption>This image was reduced too much and then enlarged with CSS, so it looks lower quality.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <hr>
+
+  <section>
+    <h3>Demonstrating Image Proportions with My Geometry Photo</h3>
+
+    <p>
+      I took this photo myself using a [round/square object] next to my [hand/face/foot/ear].
+      I chose this setup because the object should appear perfectly round or square, which
+      makes it easier to see when an image has been stretched or compressed incorrectly.
+      The original image is a [JPG/PNG/HEIC] file with dimensions of [width] × [height]
+      pixels and a file size of about [size] MB.
+    </p>
+
+    <article>
+      <h4>Original Image</h4>
+
+      <p class="image-links">
+        <a href="images/hand-box@sheastanton.jpeg" target="_blank" rel="noopener noreferrer">Original JPG</a>
+        <a href="images/hand-box@sheastanton.gif" target="_blank" rel="noopener noreferrer">Original as GIF</a>
+        <a href="images/hand-box@sheastanton-greyscale.jpeg" target="_blank" rel="noopener noreferrer">Greyscale</a>
+        <a href="images/hand-box@sheastanton-blackwhite.jpeg" target="_blank" rel="noopener noreferrer">Black and White</a>
+      </p>
+    </article>
+
+    <article>
+      <h4>Downsizing Images with CSS</h4>
+
+      <figure>
+        <img src="images/hand-box@sheastanton.jpeg" alt="Personal geometry image resized smaller with CSS" style="width: 20%; height: auto;">
+        <figcaption>
+          This is my original personal image displayed smaller using CSS while keeping the correct proportions.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <h4>Proper Reduction of Image with Editor</h4>
+
+      <figure>
+        <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Properly reduced personal geometry image" width="300" height="400">
+        <figcaption>
+          This version was resized in an image editor to make it more appropriate for web display.
+        </figcaption>
+      </figure>
+    </article>
+
+    <article>
+      <h4>Improper Image Proportions with CSS</h4>
+
+      <div class="image-grid">
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Correct personal image proportions" style="width: 300px; height: 200px;">
+          <figcaption>Correct proportion example.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Personal image squished vertically" style="width: 300px; height: 134px;">
+          <figcaption>The height is reduced, so the round or square object no longer looks correct.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Personal image badly squished vertically" style="width: 300px; height: 90px;">
+          <figcaption>The height is reduced even more, making the object look more distorted.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Personal image squeezed horizontally" style="width: 201px; height: 200px;">
+          <figcaption>The width is reduced, so the object looks squeezed.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Personal image badly squeezed horizontally" style="width: 135px; height: 200px;">
+          <figcaption>The width is reduced even more, making the distortion very obvious.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article>
+      <h4>Improper Enlarging with CSS</h4>
+
+      <div class="image-grid">
+        <figure>
+          <img src="images/hand-box-300x400@sheastanton.jpeg" alt="Properly sized personal image" style="width: 300px; height: auto;">
+          <figcaption>This version still looks clear because it was saved at a reasonable size.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hand-box-150x200@sheastanton.jpeg" alt="Tiny personal image enlarged with CSS" style="width: 300px; height: auto;">
+          <figcaption>This version was reduced too much and then enlarged, making it look blurrier or lower quality.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h3>AI Usage</h3>
+    <p>
+        I used AI to help break down the assignment instructions into a checklist,
+        organize the HTML structure, and create starter code for the image sections.
+        I also used AI to help write captions and explanations for the image resizing,
+        format conversion, and proportion examples. I still selected the images, edited
+        the image files, checked the file names, and tested the page myself.
+    </p>
+  </section>
+</main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  
+</body>
+</html>
