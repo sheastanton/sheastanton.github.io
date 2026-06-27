@@ -4,29 +4,57 @@
   <meta charset="UTF-8">
   <title>Shea Stanton's Swift Shark | ITIS3135 | Home</title>
   <link rel="stylesheet" href="styles/default.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
+  <link rel="icon" type="image/x-icon" href="images/swift-shark-favicon.ico">
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div data-include="components/header.html"></div>
+  <div class="site-wrapper">
+    <div data-include="components/header.html"></div>
 
-  <main>
-    <h2>Home</h2>
+    <main class="home-main">
+      <h2>Home</h2>
 
-    <p>Welcome to my ITIS3135 course website. This site contains my work for
-      Front-End Web Application Development, including my introduction page,
-      course contract, and project pages.
-    </p>
+      <section class="welcome-card">
+        <h3>Welcome to My ITIS3135 Course Site</h3>
 
-    <p>
-      Use the navigation menu above to visit my assignments and course pages.
-      As the semester continues, I will continue updating this site with new
-      pages and improvements based on class standards and feedback.
-    </p>
-  </main>
+        <p>
+          This website contains my work for ITIS3135: Front-End Web Application
+          Development. It includes my introduction, course contract, projects,
+          exercises, and other pages created throughout the semester.
+        </p>
 
-  <div data-include="components/footer.html"></div>
+        <p>
+          The goal of this site is to practice building organized, accessible,
+          and visually consistent webpages while improving my HTML, CSS, and
+          front-end design skills.
+        </p>
+      </section>
+
+      <section class="home-overview">
+        <h3>What You Can Find Here</h3>
+
+        <ul>
+          <li>My personal introduction page for the course.</li>
+          <li>My course contract and required class pages.</li>
+          <li>Practice assignments for layout, images, tables, forms, and navigation.</li>
+          <li>Projects that show my progress with front-end web development.</li>
+        </ul>
+      </section>
+
+      <section class="home-note">
+        <h3>Site Updates</h3>
+
+        <p>
+          As the semester continues, I will keep updating this site with new
+          assignments, improvements, and corrections based on course standards
+          and feedback.
+        </p>
+      </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+  </div>
 
   <script src="scripts/HTMLInclude.min.js"></script>
 </body>
