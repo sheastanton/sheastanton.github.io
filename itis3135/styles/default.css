@@ -1,20 +1,21 @@
 :root {
-  --page-bg: #ece7dc;
-  --panel-bg: #f7f3ea;
-  --panel-alt: #e1d7c5;
-  --heading-bg: #355c5a;
-  --heading-dark: #244240;
-  --nav-bg: #c9b57d;
-  --nav-hover: #6f5a2e;
-  --text-main: #243332;
-  --text-soft: #4f5d5b;
-  --footer-bg: #244240;
-  --footer-text: #f5eddc;
-  --footer-link: #ffe7a3;
-  --border-soft: #b8a977;
-  --shadow-soft: rgba(36, 51, 50, 0.18);
-  --button-bg: #355c5a;
-  --button-text: #f5eddc;
+  --page-bg: #d9d2bf;
+  --panel-bg: #efe4cf;
+  --panel-alt: #cfc0a4;
+  --heading-bg: #173f4f;
+  --heading-dark: #12313d;
+  --nav-bg: #d17a5b;
+  --nav-hover: #7a3e3a;
+  --text-main: #24343a;
+  --text-soft: #52666d;
+  --footer-bg: #12313d;
+  --footer-text: #f0dcc2;
+  --footer-link: #f6bf7b;
+  --border-soft: #a8785d;
+  --shadow-soft: rgba(18, 49, 61, 0.22);
+  --button-bg: #173f4f;
+  --button-text: #f0dcc2;
+  --accent-card: #e4c7a1;
 }
 
 * {
@@ -78,6 +79,7 @@ nav a:hover {
   padding-top: 8px;
   padding-bottom: 12px;
   font-size: 16px;
+  background-color: #bc684f;
 }
 
 main {
@@ -91,7 +93,7 @@ main {
 
 .home-main {
   background:
-    linear-gradient(135deg, rgba(247, 243, 234, 0.98), rgba(225, 215, 197, 0.92));
+    linear-gradient(135deg, rgba(239, 228, 207, 0.98), rgba(207, 192, 164, 0.92));
 }
 
 h2 {
@@ -120,6 +122,15 @@ main p {
   line-height: 1.7;
 }
 
+main a {
+  color: #7a3e3a;
+  font-weight: bold;
+}
+
+main a:hover {
+  color: #173f4f;
+}
+
 ul {
   font-size: 18px;
   padding-left: 35px;
@@ -132,7 +143,7 @@ li {
 .welcome-card,
 .home-overview,
 .home-note {
-  background-color: rgba(247, 243, 234, 0.82);
+  background-color: var(--accent-card);
   border: 2px solid var(--border-soft);
   border-radius: 16px;
   padding: 20px 24px;
@@ -140,7 +151,7 @@ li {
 }
 
 .home-overview {
-  background-color: rgba(225, 215, 197, 0.78);
+  background-color: var(--panel-alt);
 }
 
 figure {
