@@ -228,50 +228,54 @@
         <fieldset>
           <legend>Courses</legend>
 
-          <p>Add the courses you are taking and why you are taking them.</p>
+        <p>Add the courses you are taking and why you are taking them.</p>
 
-          <div id="courses-container">
-            <div class="course-entry">
-              <label>Department:</label>
-              <input 
-                type="text" 
-                name="courseDepartment[]" 
-                value="ITIS" 
-                placeholder="Example: ITIS" 
-                required
-              >
+  <div id="courses-container">
+    <div class="course-entry">
+      <label for="course-department-1">Department:</label>
+      <input 
+        type="text" 
+        id="course-department-1"
+        name="courseDepartment[]" 
+        value="ITIS" 
+        placeholder="Example: ITIS" 
+        required
+      >
 
-              <label>Course Number:</label>
-              <input 
-                type="text" 
-                name="courseNumber[]" 
-                value="3135" 
-                placeholder="Example: 3135" 
-                required
-              >
+      <label for="course-number-1">Course Number:</label>
+      <input 
+        type="text" 
+        id="course-number-1"
+        name="courseNumber[]" 
+        value="3135" 
+        placeholder="Example: 3135" 
+        required
+      >
 
-              <label>Course Name:</label>
-              <input 
-                type="text" 
-                name="courseName[]" 
-                value="Web-Based Application Design and Development" 
-                placeholder="Example: Web-Based Application Design and Development" 
-                required
-              >
+      <label for="course-name-1">Course Name:</label>
+      <input 
+        type="text" 
+        id="course-name-1"
+        name="courseName[]" 
+        value="Web-Based Application Design and Development" 
+        placeholder="Example: Web-Based Application Design and Development" 
+        required
+      >
 
-              <label>Reason for Taking:</label>
-              <input 
-                type="text" 
-                name="courseReason[]" 
-                value="I am taking this course to improve my web design and coding skills." 
-                placeholder="Explain why you are taking this course" 
-                required
-              >
-            </div>
-          </div>
+      <label for="course-reason-1">Reason for Taking:</label>
+      <input 
+        type="text" 
+        id="course-reason-1"
+        name="courseReason[]" 
+        value="I am taking this course to improve my web design and coding skills." 
+        placeholder="Explain why you are taking this course" 
+        required
+      >
+    </div>
+  </div>
 
-          <button type="button" id="add-course">Add Course</button>
-        </fieldset>
+  <button type="button" id="add-course">Add Course</button>
+</fieldset>
 
         <fieldset>
           <legend>Quote and Extras</legend>
@@ -281,7 +285,7 @@
             type="text" 
             id="quote" 
             name="quote" 
-            value="Success is the sum of small efforts repeated day in and day out." 
+            value="You will never realize the value of a moment until it becomes a memory." 
             placeholder="Enter a quote" 
             required
           >
@@ -291,7 +295,7 @@
             type="text" 
             id="quote-author" 
             name="quoteAuthor" 
-            value="Robert Collier" 
+            value="Shea Stanton" 
             placeholder="Enter the quote author" 
             required
           >
@@ -301,7 +305,7 @@
             type="text" 
             id="funny-thing" 
             name="funnyThing" 
-            value="I sometimes spend more time fixing small design details than writing the actual content." 
+            value="I sometimes spend more time fixing small design details than writing the actual content in order to perfect my craft." 
             placeholder="Share something funny or interesting"
           >
 
@@ -332,7 +336,7 @@
             type="url" 
             id="link-one-url" 
             name="linkUrl[]" 
-            value="https://www.linkedin.com" 
+            value="https://www.linkedin.com/in/sheastanton/" 
             placeholder="https://www.linkedin.com"
           >
 
@@ -350,7 +354,7 @@
             type="url" 
             id="link-two-url" 
             name="linkUrl[]" 
-            value="https://github.com" 
+            value="https://github.com/sheastanton/sheastanton.github.io" 
             placeholder="https://github.com"
           >
 
@@ -368,7 +372,7 @@
             type="url" 
             id="link-three-url" 
             name="linkUrl[]" 
-            value="https://webpages.charlotte.edu" 
+            value="https://webpages.charlotte.edu/bstanto1/" 
             placeholder="https://webpages.charlotte.edu"
           >
 
@@ -386,7 +390,7 @@
             type="url" 
             id="link-four-url" 
             name="linkUrl[]" 
-            value="https://www.codecademy.com" 
+            value="https://www.codecademy.com/profiles/sheastanton" 
             placeholder="https://www.codecademy.com"
           >
 
@@ -404,7 +408,7 @@
             type="url" 
             id="link-five-url" 
             name="linkUrl[]" 
-            value="https://www.freecodecamp.org" 
+            value="https://www.freecodecamp.org/sheastanton" 
             placeholder="https://www.freecodecamp.org"
           >
         </fieldset>

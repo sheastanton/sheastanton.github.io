@@ -9,26 +9,54 @@ document.addEventListener("DOMContentLoaded", function () {
   const picturePreview = document.getElementById("picture-preview");
   const defaultPicture = document.getElementById("default-picture").value;
 
+  let courseCount = 1;
+
   function getValue(id) {
     return document.getElementById(id).value.trim();
   }
 
   function addCourse() {
+    courseCount += 1;
+
     const courseEntry = document.createElement("div");
     courseEntry.classList.add("course-entry");
 
     courseEntry.innerHTML = `
-      <label>Department:</label>
-      <input type="text" name="courseDepartment[]" placeholder="Example: ITIS" required>
+      <label for="course-department-${courseCount}">Department:</label>
+      <input 
+        type="text" 
+        id="course-department-${courseCount}"
+        name="courseDepartment[]" 
+        placeholder="Example: ITIS" 
+        required
+      >
 
-      <label>Course Number:</label>
-      <input type="text" name="courseNumber[]" placeholder="Example: 3135" required>
+      <label for="course-number-${courseCount}">Course Number:</label>
+      <input 
+        type="text" 
+        id="course-number-${courseCount}"
+        name="courseNumber[]" 
+        placeholder="Example: 3135" 
+        required
+      >
 
-      <label>Course Name:</label>
-      <input type="text" name="courseName[]" placeholder="Example: Web-Based Application Design and Development" required>
+      <label for="course-name-${courseCount}">Course Name:</label>
+      <input 
+        type="text" 
+        id="course-name-${courseCount}"
+        name="courseName[]" 
+        placeholder="Example: Web-Based Application Design and Development" 
+        required
+      >
 
-      <label>Reason for Taking:</label>
-      <input type="text" name="courseReason[]" placeholder="Explain why you are taking this course" required>
+      <label for="course-reason-${courseCount}">Reason for Taking:</label>
+      <input 
+        type="text" 
+        id="course-reason-${courseCount}"
+        name="courseReason[]" 
+        placeholder="Explain why you are taking this course" 
+        required
+      >
 
       <button type="button" class="delete-course">Delete Course</button>
     `;
@@ -49,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    courseCount = 1;
     picturePreview.src = defaultPicture;
     resultSection.innerHTML = "";
     formSection.style.display = "block";
