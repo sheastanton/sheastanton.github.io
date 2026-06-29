@@ -75,10 +75,12 @@
 
           <label for="acknowledgment-date">Acknowledgment Date:</label>
           <input 
-            type="date" 
-            id="acknowledgment-date" 
-            name="acknowledgmentDate" 
-            value="2026-06-28" 
+            type="text"
+            id="acknowledgment-date"
+            name="acknowledgmentDate"
+            value="2026-06-28"
+            placeholder="YYYY-MM-DD"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
             required
           >
 
@@ -122,8 +124,8 @@
 
           <img 
             id="picture-preview" 
-            src="images/introduction-photo.jpg" 
-            alt="Default introduction photo" 
+            src="images/selfie3135intro.jpeg" 
+            alt="introduction photo" 
             width="250"
           >
 
@@ -415,7 +417,7 @@
       </form>
     </section>
 
-    <section id="result-section"></section>
+    <div id="result-section"></div>
   </main>
 
   <div data-include="components/footer.html"></div>

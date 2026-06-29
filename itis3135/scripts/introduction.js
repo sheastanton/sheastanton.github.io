@@ -9,34 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const picturePreview = document.getElementById("picture-preview");
   const defaultPicture = document.getElementById("default-picture").value;
 
-  formElement.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (!formElement.checkValidity()) {
-      formElement.reportValidity();
-      return;
-    }
-
-    displayIntroduction();
-  });
-
-  formElement.addEventListener("reset", function () {
-    setTimeout(resetFormProgress, 0);
-  });
-
-  clearButton.addEventListener("click", clearForm);
-
-  addCourseButton.addEventListener("click", addCourse);
-
-  pictureInput.addEventListener("change", function () {
-    const file = pictureInput.files[0];
-
-    if (file) {
-      picturePreview.src = URL.createObjectURL(file);
-    } else {
-      picturePreview.src = defaultPicture;
-    }
-  });
+  function getValue(id) {
+    return document.getElementById(id).value.trim();
+  }
 
   function addCourse() {
     const courseEntry = document.createElement("div");
@@ -44,67 +19,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     courseEntry.innerHTML = `
       <label>Department:</label>
-      <input 
-        type="text" 
-        name="courseDepartment[]" 
-        placeholder="Example: ITIS" 
-        required
-      >
+      <input type="text" name="courseDepartment[]" placeholder="Example: ITIS" required>
 
       <label>Course Number:</label>
-      <input 
-        type="text" 
-        name="courseNumber[]" 
-        placeholder="Example: 3135" 
-        required
-      >
+      <input type="text" name="courseNumber[]" placeholder="Example: 3135" required>
 
       <label>Course Name:</label>
-      <input 
-        type="text" 
-        name="courseName[]" 
-        placeholder="Example: Web-Based Application Design and Development" 
-        required
-      >
+      <input type="text" name="courseName[]" placeholder="Example: Web-Based Application Design and Development" required>
 
       <label>Reason for Taking:</label>
-      <input 
-        type="text" 
-        name="courseReason[]" 
-        placeholder="Explain why you are taking this course" 
-        required
-      >
+      <input type="text" name="courseReason[]" placeholder="Explain why you are taking this course" required>
 
       <button type="button" class="delete-course">Delete Course</button>
     `;
 
     coursesContainer.appendChild(courseEntry);
 
-    const deleteButton = courseEntry.querySelector(".delete-course");
-    deleteButton.addEventListener("click", function () {
+    courseEntry.querySelector(".delete-course").addEventListener("click", function () {
       courseEntry.remove();
     });
   }
 
-  function clearForm() {
-    const fields = formElement.querySelectorAll("input:not([type='hidden']), textarea");
-
-    fields.forEach(function (field) {
-      if (field.type === "file") {
-        field.value = "";
-      } else {
-        field.value = "";
-      }
-    });
-
-    picturePreview.src = defaultPicture;
-    resultSection.innerHTML = "";
-  }
-
   function resetFormProgress() {
-    const extraCourses = coursesContainer.querySelectorAll(".course-entry");
+    const courseEntries = coursesContainer.querySelectorAll(".course-entry");
 
-    extraCourses.forEach(function (course, index) {
+    courseEntries.forEach(function (course, index) {
       if (index > 0) {
         course.remove();
       }
@@ -115,8 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
     formSection.style.display = "block";
   }
 
-  function getValue(id) {
-    return document.getElementById(id).value.trim();
+  function clearForm() {
+    const fields = formElement.querySelectorAll("input:not([type='hidden']), textarea");
+
+    fields.forEach(function (field) {
+      field.value = "";
+    });
+
+    picturePreview.src = defaultPicture;
+    resultSection.innerHTML = "";
   }
 
   function displayIntroduction() {
@@ -145,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let pictureSource = defaultPicture;
 
-    if (pictureInput.files && pictureInput.files[0]) {
+    if (pictureInput.files.length > 0) {
       pictureSource = URL.createObjectURL(pictureInput.files[0]);
     }
 
@@ -175,7 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const url = linkUrls[index].value.trim();
 
       if (name !== "" && url !== "") {
-        linksHTML += `<li><a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a></li>`;
+        linksHTML += `
+          <li>
+            <a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
+          </li>
+        `;
       }
     });
 
@@ -239,4 +189,31 @@ document.addEventListener("DOMContentLoaded", function () {
       resetFormProgress();
     });
   }
+
+  formElement.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!formElement.checkValidity()) {
+      formElement.reportValidity();
+      return;
+    }
+
+    displayIntroduction();
+  });
+
+  formElement.addEventListener("reset", function () {
+    setTimeout(resetFormProgress, 0);
+  });
+
+  clearButton.addEventListener("click", clearForm);
+
+  addCourseButton.addEventListener("click", addCourse);
+
+  pictureInput.addEventListener("change", function () {
+    if (pictureInput.files.length > 0) {
+      picturePreview.src = URL.createObjectURL(pictureInput.files[0]);
+    } else {
+      picturePreview.src = defaultPicture;
+    }
+  });
 });
