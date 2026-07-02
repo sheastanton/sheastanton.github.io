@@ -9,66 +9,78 @@
 </head>
 
 <body>
-  <div data-include="components/header.html"></div>
+  <div class="site-wrapper">
+    <div data-include="components/header.html"></div>
 
-  <main>
-    <h2>About</h2>
+    <main class="home-main">
+      <h2>About</h2>
 
-    <p>
-      This page is built in part to demonstrate my work for the Charlotte course
-      ITIS3135: Front-End Web Application Development, taught in sections run by
-      Mr. von Briesen. This course focuses on helping students gain relevant
-      experience with front-end web application development through hands-on
-      website projects.
-    </p>
+      <section class="welcome-card">
+        <h3>About This Course Site</h3>
 
-    <p>
-      Throughout the course, students build multiple connected websites using
-      different tools, techniques, validators, and development workflows. More
-      information about the course can be found at
-      <a href="http://divonbriesen.github.io/web123/" target="_blank">
-        Mr. von Briesen's course website
-      </a>.
-    </p>
+        <p>
+          This page is built in part to demonstrate my work for the Charlotte course
+          ITIS3135: Front-End Web Application Development, taught in sections run by
+          Mr. von Briesen. This course focuses on helping students gain relevant
+          experience with front-end web application development through hands-on
+          website projects.
+        </p>
 
-    <h3>Tools Used in This Course</h3>
-    <ul>
-      <li>VS Code</li>
-      <li>Emmet within VS Code</li>
-      <li>SFTP through FileZilla</li>
-      <li>Git through GitHub Desktop and GitHub.com</li>
-      <li>Various browser developer tools</li>
-      <li>The Accumulus Validator</li>
-    </ul>
+        <p>
+          Throughout the course, students build multiple connected websites using
+          different tools, techniques, validators, and development workflows. More
+          information about the course can be found at
+          <a href="http://divonbriesen.github.io/web123/" target="_blank" rel="noopener noreferrer">
+            Mr. von Briesen's course website
+          </a>.
+        </p>
+      </section>
 
-    <h3>Sites Built During the Course</h3>
-    <ul>
-      <li>
-        <a href="../index.html">Personal home portfolio</a>
-      </li>
-      <li>
-        <a href="index.html">This course site</a>
-      </li>
-      <li>
-        <a href="stantonfranchise.co/index.html">Design firm site</a>
-      </li>
-      <li>
-        <a href="stuff/saNDwiChMuSEum!6.HTM">Crappy Page</a>
-      </li>
-      <li>Whimsical product company</li>
-      <li>Student, colleague, or peer management tool</li>
-      <li>Client project website</li>
-    </ul>
+      <section class="home-overview">
+        <h3>Tools Used in This Course</h3>
 
-    <p>
-      The goal is to make sure each site is clearly connected, organized,
-      validated, and designed with a consistent look and feel. All pages within
-      this course site should share the same header, footer, navigation, and
-      stylesheet.
-    </p>
-  </main>
+        <ul>
+          <li>VS Code</li>
+          <li>Emmet within VS Code</li>
+          <li>SFTP through FileZilla</li>
+          <li>Git through GitHub Desktop and GitHub.com</li>
+          <li>Various browser developer tools</li>
+          <li>The Accumulus Validator</li>
+        </ul>
+      </section>
 
-  <div data-include="components/footer.html"></div>
+      <section class="home-note">
+        <h3>Sites Built During the Course</h3>
+
+        <ul>
+          <li>
+            <a href="../index.html">Personal home portfolio</a>
+          </li>
+          <li>
+            <a href="index.html">This course site</a>
+          </li>
+          <li>
+            <a href="stantonfranchise.co/index.html">Design firm site</a>
+          </li>
+          <li>
+            <a href="stuff/saNDwiChMuSEum!6.HTM">Crappy Page</a>
+          </li>
+          <li>Whimsical product company</li>
+          <li>Student, colleague, or peer management tool</li>
+          <li>Client project website</li>
+        </ul>
+
+        <p>
+          The goal is to make sure each site is clearly connected, organized,
+          validated, and designed with a consistent look and feel. All pages within
+          this course site should share the same header, footer, navigation, and
+          stylesheet.
+        </p>
+      </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+  </div>
 
   <script src="scripts/HTMLInclude.min.js"></script>
 </body>
