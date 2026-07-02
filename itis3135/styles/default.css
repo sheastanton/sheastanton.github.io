@@ -61,6 +61,10 @@ nav {
   gap: 8px;
 }
 
+.site-wrapper > div:first-child nav:last-of-type {
+  border-radius: 0 0 18px 18px;
+}
+
 nav a {
   color: var(--heading-dark);
   text-decoration: none;
@@ -83,9 +87,8 @@ nav a:hover {
 }
 
 main {
-  width: 100%;
   max-width: none;
-  margin: 34px auto;
+  margin: 34px 0;
   padding: 30px;
   background-color: var(--panel-bg);
   border-radius: 18px;
@@ -174,8 +177,6 @@ figcaption {
   margin-top: 10px;
   color: var(--text-soft);
 }
-
-/* Footer */
 
 footer {
   background-color: var(--footer-bg);
