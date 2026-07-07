@@ -14,87 +14,104 @@
   <main>
     <h2>Swift Shark Student Survey</h2>
 
-    <p>
-      Welcome to the Swift Shark Study Supply Co. survey. This form collects information
-      from students who want better tools, supplies, and study habits for surviving a busy semester.
-    </p>
+    <section>
+      <h3>Survey Overview</h3>
+
+      <p>
+        Welcome to the Swift Shark Study Supply Co. survey. This form collects
+        information from students who want better tools, supplies, and study
+        habits for surviving a busy semester.
+      </p>
+    </section>
 
     <form action="#" method="post">
-      <fieldset>
-        <legend>Student Information</legend>
+      <section>
+        <h3>Student Information</h3>
 
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <fieldset>
+          <legend>Student Information</legend>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="major">Major or Area of Study:</label>
-        <input type="text" id="major" name="major">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="year">Academic Year:</label>
-        <select id="year" name="year">
-          <option value="">Choose one</option>
-          <option value="first-year">Freshman</option>
-          <option value="second-year">Sophomore</option>
-          <option value="third-year">Junior</option>
-          <option value="fourth-year">Senior</option>
-          <option value="other">Other</option>
-        </select>
-      </fieldset>
+          <label for="major">Major or Area of Study:</label>
+          <input type="text" id="major" name="major">
 
-      <fieldset>
-        <legend>Study Style</legend>
+          <label for="year">Academic Year:</label>
+          <select id="year" name="year">
+            <option value="">Choose one</option>
+            <option value="first-year">Freshman</option>
+            <option value="second-year">Sophomore</option>
+            <option value="third-year">Junior</option>
+            <option value="fourth-year">Senior</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+      </section>
 
-        <p>What type of student are you?</p>
+      <section>
+        <h3>Study Style</h3>
 
-        <label>
-          <input type="radio" name="student-type" value="planner">
-          The Planner Shark
-        </label>
+        <fieldset>
+          <legend>Study Style</legend>
 
-        <label>
-          <input type="radio" name="student-type" value="last-minute">
-          The Last-Minute Shark
-        </label>
+          <p>What type of student are you?</p>
 
-        <label>
-          <input type="radio" name="student-type" value="balanced">
-          The Balanced Shark
-        </label>
+          <label>
+            <input type="radio" name="student-type" value="planner">
+            The Planner Shark
+          </label>
 
-        <p>Which study tools would help you most?</p>
+          <label>
+            <input type="radio" name="student-type" value="last-minute">
+            The Last-Minute Shark
+          </label>
 
-        <label>
-          <input type="checkbox" name="tools" value="planner">
-          Weekly planner
-        </label>
+          <label>
+            <input type="radio" name="student-type" value="balanced">
+            The Balanced Shark
+          </label>
 
-        <label>
-          <input type="checkbox" name="tools" value="flashcards">
-          Flashcards
-        </label>
+          <p>Which study tools would help you most?</p>
 
-        <label>
-          <input type="checkbox" name="tools" value="notes">
-          Organized notes
-        </label>
+          <label>
+            <input type="checkbox" name="tools" value="planner">
+            Weekly planner
+          </label>
 
-        <label>
-          <input type="checkbox" name="tools" value="reminders">
-          Assignment reminders
-        </label>
-      </fieldset>
+          <label>
+            <input type="checkbox" name="tools" value="flashcards">
+            Flashcards
+          </label>
 
-      <fieldset>
-        <legend>Feedback</legend>
+          <label>
+            <input type="checkbox" name="tools" value="notes">
+            Organized notes
+          </label>
 
-        <label for="comments">What would help you feel more prepared for class?</label>
-        <textarea id="comments" name="comments" rows="1"></textarea>
-      </fieldset>
+          <label>
+            <input type="checkbox" name="tools" value="reminders">
+            Assignment reminders
+          </label>
+        </fieldset>
+      </section>
 
-      <button type="submit">Submit Survey</button>
-      <button type="reset">Reset Form</button>
+      <section>
+        <h3>Feedback</h3>
+
+        <fieldset>
+          <legend>Feedback</legend>
+
+          <label for="comments">What would help you feel more prepared for class?</label>
+          <textarea id="comments" name="comments" rows="3"></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Survey</button>
+        <button type="reset">Reset Form</button>
+      </section>
     </form>
   </main>
 

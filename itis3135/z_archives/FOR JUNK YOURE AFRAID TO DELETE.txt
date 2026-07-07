@@ -1,0 +1,28 @@
+.product-hero {
+  text-align: center;
+  padding: 25px;
+  border: 2px solid var(--heading-dark);
+  border-radius: 12px;
+  background-color: var(--panel-alt);
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.button-link:hover {
+  background-color: var(--nav-hover);
+  color: var(--footer-text);
+}
+
+:root{
+  --panel-bg: #efe4cf;
+  --button-bg: #173f4f;
+  --button-text: #f0dcc2;
+}

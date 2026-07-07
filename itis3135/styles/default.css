@@ -1,6 +1,5 @@
 :root {
   --page-bg: #d9d2bf;
-  --panel-bg: #efe4cf;
   --panel-alt: #cfc0a4;
   --heading-bg: #173f4f;
   --heading-dark: #12313d;
@@ -13,8 +12,6 @@
   --footer-link: #f6bf7b;
   --border-soft: #a8785d;
   --shadow-soft: rgba(18, 49, 61, 0.22);
-  --button-bg: #173f4f;
-  --button-text: #f0dcc2;
   --accent-card: #e4c7a1;
 }
 
@@ -22,19 +19,20 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   background-color: var(--page-bg);
-  color: var(--text-main);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-  line-height: 1.6;
 }
 
-.site-wrapper {
+body {
+  color: var(--text-main);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 94%;
   max-width: 1120px;
   margin: 24px auto;
+  line-height: 1.6;
 }
+
+/* Header and Navigation */
 
 h1 {
   background-color: var(--heading-bg);
@@ -61,7 +59,8 @@ nav {
   gap: 8px;
 }
 
-.site-wrapper > div:first-child nav:last-of-type {
+body > div:first-of-type nav:last-of-type,
+header nav:last-of-type {
   border-radius: 0 0 18px 18px;
 }
 
@@ -86,18 +85,15 @@ nav a:hover {
   background-color: #bc684f;
 }
 
+/* Main Layout */
+
 main {
-  max-width: none;
   margin: 34px 0;
   padding: 30px;
-  background-color: var(--panel-bg);
-  border-radius: 18px;
-  box-shadow: 0 4px 12px var(--shadow-soft);
-}
-
-.home-main {
   background:
     linear-gradient(135deg, rgba(239, 228, 207, 0.98), rgba(207, 192, 164, 0.92));
+  border-radius: 18px;
+  box-shadow: 0 4px 12px var(--shadow-soft);
 }
 
 h2 {
@@ -135,6 +131,18 @@ main a:hover {
   color: #173f4f;
 }
 
+section {
+  background-color: var(--accent-card);
+  border: 2px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 22px 0;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--panel-alt);
+}
+
 ul {
   font-size: 18px;
   padding-left: 35px;
@@ -144,19 +152,7 @@ li {
   margin-bottom: 8px;
 }
 
-.welcome-card,
-.home-overview,
-.home-note {
-  background-color: var(--accent-card);
-  border: 2px solid var(--border-soft);
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin: 22px 0;
-}
-
-.home-overview {
-  background-color: var(--panel-alt);
-}
+/* Images and Figures */
 
 figure {
   text-align: center;
@@ -177,6 +173,8 @@ figcaption {
   margin-top: 10px;
   color: var(--text-soft);
 }
+
+/* Footer */
 
 footer {
   background-color: var(--footer-bg);
@@ -234,6 +232,8 @@ footer nav a:hover,
   margin-bottom: 0;
 }
 
+/* Playing Cards */
+
 #playing-cards {
   display: flex;
   justify-content: center;
@@ -277,6 +277,8 @@ footer nav a:hover,
   font-weight: bold;
 }
 
+/* Tables */
+
 table {
   width: 90%;
   margin: 25px auto;
@@ -299,28 +301,7 @@ tr:nth-child(even) {
   background-color: var(--panel-alt);
 }
 
-.product-hero {
-  text-align: center;
-  padding: 25px;
-  border: 2px solid var(--heading-dark);
-  border-radius: 12px;
-  background-color: var(--panel-alt);
-}
-
-.button-link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.button-link:hover {
-  background-color: var(--nav-hover);
-  color: var(--footer-text);
-}
+/* Product Page */
 
 .product-packages {
   display: flex;
@@ -337,6 +318,8 @@ tr:nth-child(even) {
   border-radius: 10px;
   background-color: var(--panel-alt);
 }
+
+/* Blockquote */
 
 blockquote {
   background-color: var(--panel-alt);
@@ -356,6 +339,8 @@ cite {
   color: var(--text-soft);
   font-style: italic;
 }
+
+/* Forms */
 
 form {
   inline-size: 100%;
@@ -387,7 +372,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   display: block;
   box-sizing: border-box;
   inline-size: 100%;
@@ -404,6 +390,13 @@ textarea {
 textarea {
   min-block-size: 150px;
   resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  inline-size: auto;
+  margin-right: 8px;
 }
 
 input[type="file"] {
@@ -455,8 +448,10 @@ button:hover {
   border-radius: 8px;
 }
 
+/* Responsive Design */
+
 @media screen and (max-width: 700px) {
-  .site-wrapper {
+  body {
     width: 96%;
     margin: 12px auto;
   }
@@ -467,7 +462,11 @@ button:hover {
 
   main {
     padding: 20px;
-    margin: 24px auto;
+    margin: 24px 0;
+  }
+
+  section {
+    padding: 18px;
   }
 
   main p,
