@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stanton Franchise | Web Design & Consulting</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 
     <!-- Coolors Palette: https://coolors.co/0b132b-1c2541-3a506b-5bc0be-f6f7eb -->
     <style>
@@ -18,11 +19,12 @@
         header {
             background-color: #0b132b;
             color: #f6f7eb;
-            padding: 30px;
+            padding: 24px 30px;
             text-align: center;
         }
 
-        header div {
+        /* This wrapper is used only to align the logo and site name horizontally. */
+        .brand-heading {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,7 +43,7 @@
         }
 
         header p {
-            margin-top: 10px;
+            margin: 8px 0 0;
             color: #5bc0be;
             font-style: italic;
         }
@@ -49,16 +51,22 @@
         main {
             max-width: 900px;
             margin: 35px auto;
-            padding: 30px;
-            background-color: white;
+            padding: 22px 28px 28px;
+            background-color: #fbfbf2;
             border-radius: 16px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 18px rgba(11, 19, 43, 0.14);
         }
 
         h2 {
             color: #1c2541;
             border-bottom: 3px solid #5bc0be;
             padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #1c2541;
+            margin-top: 28px;
         }
 
         ul {
@@ -79,7 +87,26 @@
             margin-top: 20px;
         }
 
+        a {
+            color: #2b7a78;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: #2b7a78;
+        }
+
+        a:hover {
+            color: #1c2541;
+            text-decoration: underline;
+        }
+
         address a {
+            color: #5bc0be;
+        }
+
+        address a:visited {
             color: #5bc0be;
         }
 
@@ -94,21 +121,27 @@
         footer p {
             margin: 6px;
         }
+
+        footer em {
+            color: #5bc0be;
+        }
     </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <div>
-            <!-- Logo created with simple text initials. Replace with your own image if required. -->
+        <section class="brand-heading">
             <img src="images/stantonfranchisetransparent.png" alt="Stanton Franchise logo" width="80" height="80">
             <h1>Stanton Franchise</h1>
-        </div>
-        <p>Creative web solutions with structure, style, and strategy.</p>
+        </section>
+
+        <p><em>Creative web solutions with structure, style, and strategy.</em></p>
     </header>
 
     <main>
-        <h2>Stanton Franchise Services</h2>
+        <h2>Web Design & Consulting</h2>
 
         <p>
             Stanton Franchise is a modern web design and consulting firm focused on helping individuals,
@@ -123,7 +156,7 @@
             creativity and strategy together.
         </p>
 
-        <h2>Why Choose Stanton Franchise?</h2>
+        <h3>Why Choose Stanton Franchise?</h3>
 
         <ul>
             <li>Custom website designs built around each client’s goals.</li>
@@ -150,8 +183,8 @@
     </main>
 
     <footer>
+        <p><em>Built with purpose. Designed with confidence.</em></p>
         <p>Page created by Stanton Franchise © 2026</p>
-        <p>Built with purpose. Designed with confidence.</p>
     </footer>
 </body>
 </html>
