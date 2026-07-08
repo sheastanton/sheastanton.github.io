@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swift Shark | Home</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main id="home">
+    <h2>Swift Shark Home</h2>
+
+    <section>
+      <h3>Welcome to Swift Shark</h3>
+
+      <p>
+        Swift Shark is a custom car modification garage built for drivers who want
+        their vehicles to look cleaner, sound better, and feel more personal without
+        turning them into unreliable project cars.
+      </p>
+
+      <p>
+        The shop focuses on street-friendly upgrades for daily drivers, weekend builds,
+        and first-time car enthusiasts. From wheels and tint to lighting, wraps,
+        suspension, and interior details, Swift Shark helps cars stand out while
+        still staying practical.
+      </p>
+
+      <figure>
+        <img src="images/garage.jpg" alt="Modified car inside a clean performance garage">
+        <figcaption>A clean garage built for sharp custom builds.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Before and After Build Viewer</h3>
+
+      <p>
+        Use the buttons below to compare how a vehicle can change after a Swift Shark
+        appearance package. This feature shows how small upgrades can make a car feel
+        sharper and more complete.
+      </p>
+
+      <p>
+        The viewer is also one of the interactive JavaScript features included for
+        the final project. It changes the image and caption without opening a new page.
+      </p>
+
+      <button id="show-before" type="button">Show Before</button>
+      <button id="show-after" type="button">Show After</button>
+
+      <figure>
+        <img id="build-image" src="images/before.jpg" alt="Stock car before Swift Shark modifications">
+        <figcaption id="build-caption">Before: a clean but basic stock vehicle.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/site.js"></script>
+</body>
+</html>

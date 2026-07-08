@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swift Shark | Hours</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main id="hours">
+    <h2>Swift Shark Hours</h2>
+
+    <section>
+      <h3>Hours and Appointments</h3>
+
+      <p>
+        Swift Shark works mainly by appointment so each car gets enough time and
+        attention. Some upgrades can be completed the same day, while larger changes
+        like wraps, suspension work, or full appearance packages may need more time.
+      </p>
+
+      <p>
+        The shop also offers weekend consultation blocks for customers who want to
+        plan their build before buying parts. This keeps the process organized and
+        helps avoid wasted money on parts that do not fit the car correctly.
+      </p>
+
+      <ul>
+        <li>Monday to Friday: 10:00 AM - 6:00 PM</li>
+        <li>Saturday: 11:00 AM - 4:00 PM</li>
+        <li>Sunday: Closed</li>
+        <li>Build consultations are by appointment only.</li>
+      </ul>
+
+      <figure>
+        <img src="images/hours.jpg" alt="Garage calendar with car modification appointments">
+        <figcaption>Appointments help every build stay organized.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Request an Appointment</h3>
+
+      <p>
+        Use this form to preview how a customer might request a build consultation.
+        The form does not send real data, but it responds on the page using JavaScript.
+      </p>
+
+      <p>
+        This is the third dynamic feature because the page creates a custom message
+        based on what the user enters into the form.
+      </p>
+
+      <form id="appointment-form">
+        <label for="customer-name">Your Name:</label>
+        <input type="text" id="customer-name" required>
+
+        <label for="car-model">Car Year, Make, and Model:</label>
+        <input type="text" id="car-model" placeholder="Example: 2016 BMW M4" required>
+
+        <label for="service-type">Service Requested:</label>
+        <input type="text" id="service-type" placeholder="Example: wheels, tint, wrap" required>
+
+        <button type="submit">Preview Request</button>
+      </form>
+
+      <p id="appointment-output" class="output-box">Your appointment preview will appear here.</p>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/site.js"></script>
+</body>
+</html>

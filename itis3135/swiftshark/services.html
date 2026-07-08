@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swift Shark | Services</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main id="services">
+    <h2>Swift Shark Services</h2>
+
+    <section>
+      <h3>What We Offer</h3>
+
+      <p>
+        Swift Shark offers visual and performance-inspired modifications for drivers
+        who want their cars to feel more customized. The shop focuses on clean,
+        street-friendly upgrades instead of extreme builds that are hard to maintain.
+      </p>
+
+      <p>
+        Services include wheel fitment planning, tint packages, lighting upgrades,
+        wrap accents, exhaust styling, suspension appearance setups, interior trim
+        upgrades, and full detail refreshes.
+      </p>
+
+      <figure>
+        <img src="images/services.jpg" alt="Modified car parts including wheels, vinyl wrap, and lighting">
+        <figcaption>Small upgrades can completely change a car’s presence.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Popular Services</h3>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <h4>Style Package</h4>
+          <p>Window tint, lighting accents, and small exterior upgrades.</p>
+        </article>
+
+        <article class="service-card">
+          <h4>Street Package</h4>
+          <p>Wheels, fitment planning, tint, detail work, and clean styling.</p>
+        </article>
+
+        <article class="service-card">
+          <h4>Full Build</h4>
+          <p>Wrap accents, wheels, lighting, suspension appearance, and final detail.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h3>Package Price Estimator</h3>
+
+      <p>
+        Choose a package below to see a general estimated price range. Actual pricing
+        would depend on the vehicle, parts, labor, and the customer’s exact goals.
+      </p>
+
+      <p>
+        This estimator is another dynamic feature because JavaScript updates the
+        result on the page when the user chooses a package.
+      </p>
+
+      <label for="package-select">Choose a package:</label>
+      <select id="package-select">
+        <option value="">Select one</option>
+        <option value="style">Style Package</option>
+        <option value="street">Street Package</option>
+        <option value="full">Full Build</option>
+      </select>
+
+      <p id="package-output" class="output-box">Choose a package to see an estimated price range.</p>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/site.js"></script>
+</body>
+</html>
