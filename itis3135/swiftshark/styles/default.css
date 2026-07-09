@@ -55,6 +55,7 @@ nav {
   flex-wrap: wrap;
   gap: 10px;
   border-radius: 0 0 18px 18px;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 }
 
 nav a {
